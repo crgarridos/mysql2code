@@ -15,13 +15,13 @@ CALL fetchTables('from-this-database');
 where `from-this-database` is the database from you want to generate classes' code
 
 ### TODO
-* The actual script generate only code for greendao, please modify the fetchtables method to include `genProperties`functiion which do generate c++ class' code 
+* The actual script generate only code for greendao, please modify the fetchtables method to include `genProperties` functiion which do generate c++ class' code 
 
     ```sql
     SELECT genProperties('table','database');
     ```
 * rename types in utils-cript.sql file to make them compatible with c++ types
-* There is some code to generate classes' relations, this lines are contained in [gen-properties.sql] and you should do a second request with the lines commented in the code below:
+* There is some code to generate classes' relations, this lines are contained in [gen-properties.sql](../blob/master/gen-properties.sql) and you should do a second request with the lines commented in the code below:
 
     ```sql
     DECLARE vPropCursor CURSOR FOR 
