@@ -1,0 +1,1 @@
+CALL fetchTables('from-this-database');
