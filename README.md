@@ -1,4 +1,6 @@
-# mysql2code
+mysql2code
+===
+
 MySql procedures to generate classes or code automatically based on schema structure
 > base on this https://gist.github.com/crgarridos/f5765b19bb8690ba7d18
 
@@ -11,3 +13,12 @@ Then the use is just the call to the main function that generate the code as a s
 CALL fetchTables('from-this-database');
 ```
 where `from-this-database` is the database from you want to generate classes' code
+
+### TODO
+* The actual script generate only code for greendao, please modify the fetchtables method to include `genProperties`functiion which do generate c++ class' code 
+
+  ```sql
+  SELECT genProperties('table','database');
+  ```
+* rename types in utils-cript.sql file to make them compatible with c++ types
+
